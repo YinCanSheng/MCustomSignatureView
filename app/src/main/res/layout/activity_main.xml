@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ch.tool.customsignatureview.MainActivity">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/CardView_MainActivity_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/TextView_MainActivity_Save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="保存签名"/>
+
+            <TextView
+                android:id="@+id/TextView_MainActivity_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="清除签名"/>
+
+            <TextView
+                android:id="@+id/TextView_MainActivity_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="居中"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <com.ch.tool.customsignatureview.CustomSignatureView
+        android:id="@+id/CustomSignatureView_MainActivity_Canvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/CardView_MainActivity_control"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/TextView_MainActivity_spot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cardview_dark_background"
+                android:text="签名识别"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
